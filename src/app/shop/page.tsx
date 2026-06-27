@@ -3,12 +3,12 @@
 import Link from 'next/link';
 
 const products = [
-  { id: '1', name: 'Heat Pump Maintenance Kit', price: 99.99, image: '/hotwaterheatpumps.png', description: 'Complete maintenance kit for your heat pump system. Includes all essential tools and cleaning supplies to keep your system running efficiently.' },
-  { id: '2', name: 'Water Filter Replacement', price: 49.99, image: '/waterfilteration.png', description: 'High-quality water filter replacement cartridges for your home water filtration system. Ensures clean and safe drinking water for your family.' },
-  { id: '3', name: 'Smart Thermostat', price: 199.99, image: '/heatingandcooling.png', description: 'WiFi-enabled smart thermostat with energy-saving features. Control your home temperature from anywhere using your smartphone.' },
-  { id: '4', name: 'Solar Panel Cleaner', price: 29.99, image: '/solarandbatterysystem.png', description: 'Professional-grade solar panel cleaning solution. Removes dirt, dust, and debris to maximize your solar panel efficiency.' },
-  { id: '5', name: 'Energy Monitor', price: 149.99, image: '/solarvic.png', description: 'Real-time energy monitoring device. Track your home energy consumption and identify opportunities to reduce your electricity bills.' },
-  { id: '6', name: 'Plumbing Tool Set', price: 79.99, image: '/emerald.png', description: 'Comprehensive plumbing tool set for DIY repairs and maintenance. Includes wrenches, pliers, pipe cutters, and more.' },
+  { id: '1', name: 'Heat Pump Maintenance Kit',  image: '/hotwaterheatpumps.png', description: 'Complete maintenance kit for your heat pump system. Includes all essential tools and cleaning supplies to keep your system running efficiently.' },
+  { id: '2', name: 'Water Filter Replacement',  image: '/waterfilteration.png', description: 'High-quality water filter replacement cartridges for your home water filtration system. Ensures clean and safe drinking water for your family.' },
+  { id: '3', name: 'Smart Thermostat',  image: '/heatingandcooling.png', description: 'WiFi-enabled smart thermostat with energy-saving features. Control your home temperature from anywhere using your smartphone.' },
+  { id: '4', name: 'Solar Panel Cleaner',  image: '/solarandbatterysystem.png', description: 'Professional-grade solar panel cleaning solution. Removes dirt, dust, and debris to maximize your solar panel efficiency.' },
+  { id: '5', name: 'Energy Monitor',  image: '/solarvic.png', description: 'Real-time energy monitoring device. Track your home energy consumption and identify opportunities to reduce your electricity bills.' },
+  { id: '6', name: 'Plumbing Tool Set',  image: '/emerald.png', description: 'Comprehensive plumbing tool set for DIY repairs and maintenance. Includes wrenches, pliers, pipe cutters, and more.' },
 ];
 
 export default function ShopPage() {
