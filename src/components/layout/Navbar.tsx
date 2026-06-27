@@ -149,7 +149,7 @@ export default function Navbar() {
               >
                 <Search size={20} />
               </button>
-              <button
+              {/* <button
                 onClick={() => setIsCartOpen(true)}
                 className="relative p-2 text-textLight hover:text-primary-400 hover:bg-white/10 rounded-full transition-all"
                 aria-label="Cart"
@@ -160,7 +160,7 @@ export default function Navbar() {
                     {cartCount}
                   </span>
                 )}
-              </button>
+              </button> */}
               <Link href="/signin" className="p-2 text-textLight hover:text-primary-400 hover:bg-white/10 rounded-full transition-all">
                 <User size={20} />
               </Link>
