@@ -196,6 +196,7 @@ export default function Home() {
       {/* Trust Bar */}
       <section className="py-12 bg-white border-y border-gray-200">
         <div className="container mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-textDark">Our Partners</h2>
           <div className="flex items-center justify-center gap-8 md:gap-16 flex-wrap">
             {partners.map((partner, i) => (
               <motion.div
