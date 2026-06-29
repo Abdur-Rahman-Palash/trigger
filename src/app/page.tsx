@@ -167,7 +167,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative w-full min-h-[100vh] bg-bgDark text-textLight flex items-center justify-center overflow-hidden">
+      <section ref={heroRef} className="relative w-full min-h-[calc(100vh-5rem)] bg-bgDark text-textLight flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 via-transparent to-secondary-500/20 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 animate-blob"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary-500/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 animate-blob animation-delay-2000"></div>
