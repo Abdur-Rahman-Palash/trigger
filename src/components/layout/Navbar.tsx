@@ -40,7 +40,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-8">
               <Link href="/" className="text-textLight hover:text-primary-400 transition-colors">
                 Home
               </Link>
@@ -79,11 +79,11 @@ export default function Navbar() {
                         <h3 className="font-bold text-textDark mb-4">Featured</h3>
                         <div className="space-y-4">
                           <Link href="/resources/why-heat-pumps" className="block bg-gray-100 rounded-lg p-4 hover:bg-gray-200 transition-colors">
-                            <div className="h-24 bg-gradient-to-br from-primary-400 to-primary-600 rounded mb-2"></div>
+                            <img src="/hotwaterheatpumps.png" alt="Heat Pumps" className="w-full h-24 object-cover rounded mb-2" />
                             <p className="text-sm font-semibold text-textDark">Why Heat Pumps Save You $$</p>
                           </Link>
                           <Link href="/resources/rebates" className="block bg-gray-100 rounded-lg p-4 hover:bg-gray-200 transition-colors">
-                            <div className="h-24 bg-gradient-to-br from-accent-400 to-accent-600 rounded mb-2"></div>
+                            <img src="/solarandbatterysystem.png" alt="Solar Rebates" className="w-full h-24 object-cover rounded mb-2" />
                             <p className="text-sm font-semibold text-textDark">Govt Rebates Explained</p>
                           </Link>
                         </div>
@@ -141,7 +141,7 @@ export default function Navbar() {
             </div>
 
             {/* Utility Icons & CTAs */}
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-4">
               <button
                 onClick={() => setIsSearchOpen(true)}
                 className="p-2 text-textLight hover:text-primary-400 hover:bg-white/10 rounded-full transition-all"
@@ -174,7 +174,7 @@ export default function Navbar() {
 
             {/* Mobile Menu Toggle */}
             <button
-              className="md:hidden text-textLight"
+              className="lg:hidden text-textLight"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -184,7 +184,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-bgDark border-t border-white/10">
+          <div className="lg:hidden bg-bgDark border-t border-white/10">
             <div className="container mx-auto px-6 py-6 space-y-4">
               <Link href="/" className="block text-textLight text-lg font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
               <Link href="/services" className="block text-textLight text-lg font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
