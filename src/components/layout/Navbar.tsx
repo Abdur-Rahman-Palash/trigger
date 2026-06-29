@@ -32,20 +32,20 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-40 bg-bgDark/95 backdrop-blur-md border-b border-white/10 font-inter">
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between h-20">
+        <div className="relative max-w-[1280px] mx-auto px-6">
+          <div className="flex flex-nowrap items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="text-2xl font-bold text-textLight hover:text-primary-400 transition-colors">
+            <Link href="/" className="whitespace-nowrap flex-shrink-0 mr-8 text-lg lg:text-xl xl:text-2xl font-bold text-textLight hover:text-primary-400 transition-colors">
               Trigger Group
             </Link>
 
             {/* Desktop Menu */}
-            <div className="flex items-center gap-2 lg:gap-8">
+            <div className="flex items-center gap-2 lg:gap-4">
               <Link href="/" className="text-textLight hover:text-primary-400 transition-colors">
                 Home
               </Link>
 
-              {/* Services Dropdown (Mega Menu) */}
+              {/* Services Dropdown */}
               <div
                 className="relative group"
                 onMouseEnter={() => setIsServicesOpen(true)}
@@ -55,40 +55,17 @@ export default function Navbar() {
                   Services <ChevronDown size={16} />
                 </button>
                 {isServicesOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-[800px] bg-white shadow-2xl rounded-xl opacity-100 visible transition-all duration-300 transform translate-y-0">
-                    <div className="grid grid-cols-3 gap-8 p-8">
-                      <div>
-                        <h3 className="font-bold text-textDark mb-4">Heat Pumps</h3>
-                        <ul className="space-y-2">
-                          <li><Link href="/heat-pumps/overview" className="text-gray-600 hover:text-primary-600">Heat Pump Overview</Link></li>
-                          <li><Link href="/heat-pumps/viva" className="text-gray-600 hover:text-primary-600">Viva</Link></li>
-                          <li><Link href="/heat-pumps/neopower" className="text-gray-600 hover:text-primary-600">Neopower</Link></li>
-                          <li><Link href="/heat-pumps/emerald" className="text-gray-600 hover:text-primary-600">Emerald Energy</Link></li>
-                          <li><Link href="/heat-pumps/rates" className="text-gray-600 hover:text-primary-600">Supply & Install Rates</Link></li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-textDark mb-4">Solar & Energy</h3>
-                        <ul className="space-y-2">
-                          <li><Link href="/solar-battery" className="text-gray-600 hover:text-primary-600">Solar & Battery Systems</Link></li>
-                          <li><Link href="/water-filtration" className="text-gray-600 hover:text-primary-600">Whole Home Water Filtration</Link></li>
-                          <li><Link href="/heating-cooling" className="text-gray-600 hover:text-primary-600">Heating & Cooling</Link></li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-textDark mb-4">Featured</h3>
-                        <div className="space-y-4">
-                          <Link href="/resources/why-heat-pumps" className="block bg-gray-100 rounded-lg p-4 hover:bg-gray-200 transition-colors">
-                            <img src="/hotwaterheatpumps.png" alt="Heat Pumps" className="w-full h-24 object-cover rounded mb-2" />
-                            <p className="text-sm font-semibold text-textDark">Why Heat Pumps Save You $$</p>
-                          </Link>
-                          <Link href="/resources/rebates" className="block bg-gray-100 rounded-lg p-4 hover:bg-gray-200 transition-colors">
-                            <img src="/solarandbatterysystem.png" alt="Solar Rebates" className="w-full h-24 object-cover rounded mb-2" />
-                            <p className="text-sm font-semibold text-textDark">Govt Rebates Explained</p>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
+                  <div className="absolute top-full left-0 w-48 bg-white shadow-xl rounded-lg opacity-100 visible transition-all duration-300 transform translate-y-0 z-50">
+                    <ul className="p-4 space-y-2">
+                      <li><Link href="/heat-pumps/overview" className="block text-gray-600 hover:text-primary-600 py-1">Heat Pump Overview</Link></li>
+                      <li><Link href="/heat-pumps/viva" className="block text-gray-600 hover:text-primary-600 py-1">Viva</Link></li>
+                      <li><Link href="/heat-pumps/neopower" className="block text-gray-600 hover:text-primary-600 py-1">Neopower</Link></li>
+                      <li><Link href="/heat-pumps/emerald" className="block text-gray-600 hover:text-primary-600 py-1">Emerald Energy</Link></li>
+                      <li><Link href="/heat-pumps/rates" className="block text-gray-600 hover:text-primary-600 py-1">Supply & Install Rates</Link></li>
+                      <li><Link href="/solar-battery" className="block text-gray-600 hover:text-primary-600 py-1">Solar & Battery Systems</Link></li>
+                      <li><Link href="/water-filtration" className="block text-gray-600 hover:text-primary-600 py-1">Whole Home Water Filtration</Link></li>
+                      <li><Link href="/heating-cooling" className="block text-gray-600 hover:text-primary-600 py-1">Heating & Cooling</Link></li>
+                    </ul>
                   </div>
                 )}
               </div>
@@ -103,7 +80,7 @@ export default function Navbar() {
                   About <ChevronDown size={16} />
                 </button>
                 {isAboutOpen && (
-                  <div className="absolute top-full left-0 w-48 bg-white shadow-xl rounded-lg opacity-100 visible transition-all duration-300 transform translate-y-0">
+                  <div className="absolute top-full left-0 w-48 bg-white shadow-xl rounded-lg opacity-100 visible transition-all duration-300 transform translate-y-0 z-50">
                     <ul className="p-4 space-y-2">
                       <li><Link href="/about-us" className="block text-gray-600 hover:text-primary-600 py-1">About Us</Link></li>
                       <li><Link href="/our-process" className="block text-gray-600 hover:text-primary-600 py-1">Our Process</Link></li>
@@ -125,7 +102,7 @@ export default function Navbar() {
                   Resources <ChevronDown size={16} />
                 </button>
                 {isResourcesOpen && (
-                  <div className="absolute top-full left-0 w-48 bg-white shadow-xl rounded-lg opacity-100 visible transition-all duration-300 transform translate-y-0">
+                  <div className="absolute top-full left-0 w-48 bg-white shadow-xl rounded-lg opacity-100 visible transition-all duration-300 transform translate-y-0 z-50">
                     <ul className="p-4 space-y-2">
                       <li><Link href="/resources" className="block text-gray-600 hover:text-primary-600 py-1">Energy Saving Guides</Link></li>
                       <li><Link href="/resources/calculator" className="block text-gray-600 hover:text-primary-600 py-1">Rebate & Finance Calculator</Link></li>
@@ -164,10 +141,10 @@ export default function Navbar() {
               <Link href="/signin" className="p-2 text-textLight hover:text-primary-400 hover:bg-white/10 rounded-full transition-all">
                 <User size={20} />
               </Link>
-              <Link href="/quote-request" className="px-4 py-2 lg:px-6 lg:py-2 bg-accent-500 text-bgDark font-semibold rounded-lg hover:bg-accent-400 transition-colors text-sm lg:text-base">
+              <Link href="/quote-request" className="whitespace-nowrap px-4 py-2 lg:px-6 lg:py-2 bg-accent-500 text-bgDark font-semibold rounded-lg hover:bg-accent-400 transition-colors text-sm lg:text-base">
                 Get a Free Quote
               </Link>
-              <a href="tel:0391001214" className="px-4 py-2 lg:px-6 lg:py-2 border border-textLight text-textLight font-semibold rounded-lg hover:bg-textLight hover:text-bgDark transition-colors text-sm lg:text-base">
+              <a href="tel:0391001214" className="whitespace-nowrap px-4 py-2 lg:px-6 lg:py-2 border border-textLight text-textLight font-semibold rounded-lg hover:bg-textLight hover:text-bgDark transition-colors text-sm lg:text-base">
                 📞 Call Now
               </a>
             </div>
