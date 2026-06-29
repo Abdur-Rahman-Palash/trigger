@@ -40,7 +40,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-4 lg:gap-8">
+            <div className="flex items-center gap-2 lg:gap-8">
               <Link href="/" className="text-textLight hover:text-primary-400 transition-colors">
                 Home
               </Link>
@@ -141,7 +141,7 @@ export default function Navbar() {
             </div>
 
             {/* Utility Icons & CTAs */}
-            <div className="hidden md:flex items-center gap-2 lg:gap-4">
+            <div className="flex items-center gap-2 lg:gap-4">
               <button
                 onClick={() => setIsSearchOpen(true)}
                 className="p-2 text-textLight hover:text-primary-400 hover:bg-white/10 rounded-full transition-all"
@@ -174,7 +174,7 @@ export default function Navbar() {
 
             {/* Mobile Menu Toggle */}
             <button
-              className="md:hidden text-textLight"
+              className="hidden text-textLight"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -184,7 +184,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-bgDark border-t border-white/10">
+          <div className="sm:hidden bg-bgDark border-t border-white/10">
             <div className="container mx-auto px-6 py-6 space-y-4">
               <Link href="/" className="block text-textLight text-lg font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
               <Link href="/services" className="block text-textLight text-lg font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
